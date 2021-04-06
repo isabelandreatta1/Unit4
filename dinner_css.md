@@ -1,32 +1,32 @@
 # CSS Diner Game 
 
-Level 1: ```plate ```
+Level 1: Type Selector: Selects all elements of type  ```plate ```
 
-Level 2: ```bento ```
+Level 2: Type Selector: Select elements by their type ```bento ```
 
-Level 3: ```#fancy``` 
+Level 3: ID Selector: Select elements with an ID ```#fancy``` 
 
-Level 4: ```plate apple```
+Level 4: Descendant Selector: Select an element inside another element```plate apple```
 
-Level 5: ```#fancy pickle```
+Level 5: Combine the Descendant & ID Selectors```#fancy pickle```
 
-Level 6: ```.small```
+Level 6: Class Selector: Select elements by their class ```.small```
 
-Level 7: ```orange.small ```
+Level 7:  Combine the Class Selector```orange.small ```
 
 Level 8: ```bento orange.small ```
 
-Level 9 : ```plate, bento```
+Level 9 : Comma Combinator: Combine, selectors, with... commas!```plate, bento```
 
-Level 10: ```* ```
+Level 10: The Universal Selector: You can select everything!```* ```
 
-Level 11: ```plate *```
+Level 11: Combine the Universal Selector```plate *```
 
-Level 12: ```plate + apple ```
+Level 12:  Adjacent Sibling Selector: Select an element that directly follows another element```plate + apple ```
 
-Level 13: ```bento ~ pickle```
+Level 13: General Sibling Selector: Select elements that follows another element```bento ~ pickle```
 
-Level 14: ```plate > apple```
+Level 14: Child Selector: Select direct children of an element```plate > apple```
 
 Level 15: ```orange: first child```
 
