@@ -93,7 +93,7 @@ Whether flex items are forced on a single line or can be wrapped on multiple lin
 
 **flex-flow**
 Shorthand property for flex-direction and flex-wrap
-- <flex-direction> <flex-wrap>
+- flex-direction, flex-wrap 
 
 **align-content**
 Aligns a flex-container's lines within the flex container when there is extra space on the cross-axis
