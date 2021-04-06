@@ -1,7 +1,5 @@
 ## Flexbox Froggy 
 
-![](https://github.com/isabelandreatta1/Unit4/blob/main/images/froggy.png)
-
 Level 1: ```justify-content: flex-end;``` 
 
 Level 2: ```justify-content:center;``` 
