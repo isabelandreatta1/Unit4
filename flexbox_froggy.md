@@ -104,4 +104,8 @@ Aligns a flex-container's lines within the flex container when there is extra sp
 - space-around
 - stretch(default)
 
+### Short Reflection 
+
+Through both the froggy game and the Diner game, I was able to learn and get more comfortable with CSS, more specifically, element spacing and selection. I wrote down all the different type of things learnt above. However, I think that to get better aquainted with CSS, I would need to use these lessons in a project. This is because, while we saw how the different commands changed the layout in the game, it is about remembering all the commands and knowing when to use which. 
+
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/forggy_complete.png)
