@@ -117,6 +117,45 @@ countLetter(text, letter)
 
 [HL] Solve and thest the program in Javascript
 
+**Html Code** 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz33</title>
+    <script src="quiz33java.js"></script>
+
+</head>
+<body>
+<!--this creates a button so that every time i press it, it actives the function in the java file -->
+<button onclick="countLetter()">Activate function</button>
+
+</body>
+</html>
+```
+
+**Javascript Code** 
+
+```js
+function countLetter(){
+    var text = "hello this is a text to check how many letter 't' this has";
+    var letter = "t";
+    var counter = 0;
+    var characters;
+    // create loop which iterates through each character in text
+    for (characters = 0; characters < text.length; characters++) {
+        if (text[characters] === letter){
+            // if the character is the same, then counter increases
+            counter +=1;
+        }
+    }
+    console.log(counter);
+
+}
+```
+
 ### Quiz 34
 
 There are N cities in a row, numbered from 0 to N-1. There are one-way roads going from left to right between cities. For each city, you know where the road starts, or if there is no road (-1). Output the number of cities that can be reached from city 0 using the roads. 
