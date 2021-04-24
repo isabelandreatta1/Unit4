@@ -10,6 +10,36 @@ mirroredTime(n=12) → 12:12, 12:21
 mirroredTime(n=99) → NONE
 
 [HL] Use OOP in your solution.
+```py
+class Solution:
+# create class for the solution, only attribute needed is input
+    def __init__(self,input):
+        self.input: int = input
+
+    def mirroredTime(self):
+        input = self.input
+        #make input into a string so that we can concatenate and get index 
+        input = str(input)
+        #if the input is two digits long and they are not the duplicated digits 
+        if len(input) ==2 and (input[0] != input[1]):
+          #the minute is the reverse order of the digits/index
+            minutes = input[1] + input[0]
+            #must validate that the hour and minutes are correct
+            #if the input is less than 24 hours and the minutes less than 60
+            if int(input)< 24 and int(minutes) < 60:
+                return(f"{input}:{input}, {input}:{minutes}")
+        #if the input has one digit or has duplicate digits, and if it is less than 24 hours
+        #and hence below 60, then print 
+        elif int(input) < 24:
+            return f"{input}:{input}"
+        else:
+            return
+
+print(Solution(11).mirroredTime())
+print(Solution(12).mirroredTime())
+print(Solution(99).mirroredTime())
+print(Solution(9).mirroredTime())
+```
 
 
 ### Quiz 29
@@ -30,6 +60,27 @@ findTwoDivisors(861648772) -> 16
 findTwoDivisors(569097293) -> 0
 
 [HL] Use OOP in your solution.
+
+```py
+class SolutionToQuiz:
+    def __init__(self, N):
+        self.N: int = N
+
+    def DividedByTwo(self):
+        N = self.N
+        counterofdivisors =0
+        for numbers in range(2,N+1,2):
+            if N % numbers == 0:
+                counterofdivisors += 1
+        return counterofdivisors
+
+print(SolutionToQuiz(N = 8).DividedByTwo())
+print(SolutionToQuiz(N = 9).DividedByTwo())
+print(SolutionToQuiz(N=158260522).DividedByTwo())
+print(SolutionToQuiz(N=861648772).DividedByTwo())
+```
+
+
 
 ### Quiz 31
 
