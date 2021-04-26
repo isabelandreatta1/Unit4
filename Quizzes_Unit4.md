@@ -172,3 +172,15 @@ function countLetter(){
 There are N cities in a row, numbered from 0 to N-1. There are one-way roads going from left to right between cities. For each city, you know where the road starts, or if there is no road (-1). Output the number of cities that can be reached from city 0 using the roads. 
 
 that means that city 0 has no roads incoming (of course, the road could only come from the left, but this is the first city), city 1 has one road incoming from city 0, city 2 has incoming roads from city 1, and city 3 doesn't have any roads incoming, so you have to output 2, because we don't count city 0, city 1 can be reached from city zero (0 -> 1), city 2 can also be reached (0 -> 1 -> 2), and city 3 can't be reached from city 0.
+
+## Quiz 35 
+
+Given an angle in degrees, find the time h:mm at which the hour and minute hands on a 12-hour clock form this angle exactly.
+
+For instance, if the angle required is 45, this occurs at 4:30, when the hour hand is halfway between the 4 and 5, and the minute hand is pointing straight down at the 6. An angle of -45 occurs at 7:30. Both of these angles also occur at other times, but not exactly on the minute mark.
+
+Test Cases:
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz35.png)
+
+[HL] Solve and thest the program in Javascript
+
