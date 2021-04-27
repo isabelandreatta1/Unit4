@@ -53,6 +53,8 @@ Use V:working, X:dead ?:not have enough information
 
 [HL] Use OOP in your solution.
 
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz29testcases.png)
+
 ### Quiz 30
 
 Find the number of divisors of the number that are divisible by 2.
@@ -167,11 +169,16 @@ function countLetter(){
 }
 ```
 
+**Test**
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz33.png)
 ### Quiz 34
 
 There are N cities in a row, numbered from 0 to N-1. There are one-way roads going from left to right between cities. For each city, you know where the road starts, or if there is no road (-1). Output the number of cities that can be reached from city 0 using the roads. 
 
 that means that city 0 has no roads incoming (of course, the road could only come from the left, but this is the first city), city 1 has one road incoming from city 0, city 2 has incoming roads from city 1, and city 3 doesn't have any roads incoming, so you have to output 2, because we don't count city 0, city 1 can be reached from city zero (0 -> 1), city 2 can also be reached (0 -> 1 -> 2), and city 3 can't be reached from city 0.
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz34tes.png)
 
 ## Quiz 35 
 
