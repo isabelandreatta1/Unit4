@@ -186,8 +186,212 @@ Given an angle in degrees, find the time h:mm at which the hour and minute hands
 
 For instance, if the angle required is 45, this occurs at 4:30, when the hour hand is halfway between the 4 and 5, and the minute hand is pointing straight down at the 6. An angle of -45 occurs at 7:30. Both of these angles also occur at other times, but not exactly on the minute mark.
 
+
+**HTML** 
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Digital Analog Clock</title>
+    <link rel="stylesheet" href="styleClock.css" type="text/css" media="all">
+    <script src="ClockJava.js"defer></script>
+</head>
+
+<body>
+<main class="main">
+    <div class="clockbox">
+        <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+            <g id="face">
+                <circle class="circle" cx="300" cy="300" r="253.9"/>
+                <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+                <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+            </g>
+            <g id="hour">
+                <path class="hour-arm" d="M300.5 298V142"/>
+                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+            <g id="minute">
+                <path class="minute-arm" d="M300.5 298V67"/>
+                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+            </g>
+        </svg>
+
+        <form class = "user-input">
+            <input type = "input" id="angle" name="quantity" min="-180" max="180">
+            <input type="button" value = "Submit" onClick = "AngleTime()">
+        </form>
+    </div>
+
+</main>
+
+</body>
+
+</html>
+```
+
+**CSS** 
+```css
+.main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+}
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+
+.user-input{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-input input{
+    width: 45%;
+}
+
+/* Clock styles */
+.circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #000;
+}
+.hour-marks {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    /*transition: transform .5s ease-in-out;*/
+}
+```
+
+**Javascript** 
+```js
+function countLetter(){
+    var text = "hello this is a text to check how many letter 't' this has";
+    var letter = "t";
+    var counter = 0;
+    var characters;
+    // create loop which iterates through each character in text
+    for (characters = 0; characters < text.length; characters++) {
+        if (text[characters] === letter){
+            // if the character is the same, then counter increases
+            counter +=1;
+        }
+    }
+    console.log(counter);
+}
+```
+     
+
+
+
+
+
 Test Cases:
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz35.png)
 
 [HL] Solve and thest the program in Javascript
+
+## Quiz 36 
+
+Black Box 
+
+
+**HTML Code** 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz36</title>
+    <script src="quiz36java.js"></script>
+</head>
+<body>
+<form class = "user-input">
+    <input type = "input" id="input">
+</form>
+<button onclick="Average()">Activate function</button>
+</body>
+</html>
+```
+
+
+**Javascript** 
+```js
+function Average(){
+    var input = document.getElementById("input").value;
+    input = input.split(',');
+    var length = input.length;
+    var output = 0;
+    var sum = 0;
+    var type = "";
+    var middleOfAverage;
+    var numbers;
+    if (length % 2 == 0){
+        input = input.sort();
+        middleOfAverage = parseInt(length/2);
+        output = input[middleOfAverage];
+        type = "even";
+    }
+    else{
+        for (numbers = 0; numbers < length; numbers ++){
+            sum += parseInt(input[numbers]);
+            type = "odd";
+        }
+        output = (sum/length);
+    }
+    console.log("The length of the input is", type, ". ", "The average of",input," is ", output);
+
+}
+```
+
+**Test** 
 
