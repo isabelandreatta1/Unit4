@@ -330,13 +330,14 @@ function countLetter(){
 }
 ```
      
-
-
-
-
-
 Test Cases:
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz35.png)
+
+**Test** 
+
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz35test.png) 
+
 
 [HL] Solve and thest the program in Javascript
 
@@ -344,6 +345,7 @@ Test Cases:
 
 Black Box 
 
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz36.png)
 
 **HTML Code** 
 ```html
@@ -394,4 +396,6 @@ function Average(){
 ```
 
 **Test** 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz36test.png)
 
