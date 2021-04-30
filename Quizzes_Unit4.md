@@ -450,6 +450,15 @@ function MaxHeight(){
     console.log("Max difference is: ", biggest_difference);
 }
 ```
+**Test** 
 
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz37_A.png)
+
+Test 1 
+
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz37_B.png)
+
+Test 2 
 
 
