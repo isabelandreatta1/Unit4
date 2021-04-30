@@ -70,13 +70,19 @@ findTwoDivisors(569097293) -> 0
 ```py
 class SolutionToQuiz:
     def __init__(self, N):
+        #create attribute for the input or N
         self.N: int = N
+
 
     def DividedByTwo(self):
         N = self.N
-        counterofdivisors =0
+        #create variable to count the number of even divisors
+        counterofdivisors = 0
+        #iterate through numbers until N by two so all numbers are even
         for numbers in range(2,N+1,2):
+            #if the module of the number is 0
             if N % numbers == 0:
+                #then add one to the number of divisors
                 counterofdivisors += 1
         return counterofdivisors
 
@@ -313,32 +319,47 @@ For instance, if the angle required is 45, this occurs at 4:30, when the hour ha
 ```
 
 **Javascript** 
+
 ```js
 const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
+// call the hour and minute hand lines created in the html 
 
 function AngleTime() {
     var input = document.getElementById("angle").value;
+    // gets the value from the user using the id assigned to the form in html
     var minutes = 0;
     var hour = 0;
     var angle;
+    // repeat or loop until 720, or every single possibility of time in a clock
+    // because there are 60 minutes in one hour, we need to times this by 12 (the nuuber of hours)
     for (loop = 0; loop < 720; loop++) {
+        // print out all the possible times to check if the clock works
+        // to find hours, divide by 60 while to find minutes it is the mod of 60 because there are only
+        // 59 minutes possible
         console.log( "Hour", parseInt(loop/60), "Minute", loop % 60);
+        // to find the angle of the hour, get the hour and then times by 30
+        // 30 because an hour hand moves 30 degrees for each hour or 360/12 = 30
         hour = parseInt(loop/60*30);
+        // to find the angle of the minutes, get the minutes and then times by 6
+        // 6 because each minute hand moves 6 degrees, or 360/60 = 6
         minutes = parseInt(loop%60*6);
+        // to find the angle the hour and minute create, need to subtract the minutes from hours
         angle = (minutes - hour);
         console.log(angle, hour, loop);
+        //if the angle found is the same as the user input
         if (angle == input) {
             console.log("Angle", angle, "Hour", hour, "Minute", minutes);
+            //print the angle, hour and minutes
             let hrPosition = hour;
+            //create variables for the positions of the hour and minute hands
             let minPosition = minutes;
+            //use transform method to move the clock hands depending on their respective angles
             HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
             MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
         }
-
     }
 }
-
 ```
      
 Test Cases:
@@ -380,7 +401,9 @@ Black Box
 **Javascript** 
 ```js
 function Average(){
+    // call and create variable for the user input
     var input = document.getElementById("input").value;
+    //because user input is a string, split to ignore commas
     input = input.split(',');
     var length = input.length;
     var output = 0;
@@ -388,21 +411,27 @@ function Average(){
     var type = "";
     var middleOfAverage;
     var numbers;
+    // if the length of input is even, or mod 2 is 0
     if (length % 2 == 0){
+        // then use sort method to sort by numeric ascending order
         input = input.sort();
+        // then find the middle index by dividing the length of input by two
         middleOfAverage = parseInt(length/2);
+        // output then becomes the median, or the number in the middle 
         output = input[middleOfAverage];
         type = "even";
     }
     else{
+        //else means that the length of the input is odd
         for (numbers = 0; numbers < length; numbers ++){
+            // add each number to each other 
             sum += parseInt(input[numbers]);
             type = "odd";
         }
+        //divide sum by the length of input 
         output = (sum/length);
     }
     console.log("The length of the input is", type, ". ", "The average of",input," is ", output);
-
 }
 ```
 
