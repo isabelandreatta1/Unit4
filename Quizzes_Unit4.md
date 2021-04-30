@@ -314,20 +314,31 @@ For instance, if the angle required is 45, this occurs at 4:30, when the hour ha
 
 **Javascript** 
 ```js
-function countLetter(){
-    var text = "hello this is a text to check how many letter 't' this has";
-    var letter = "t";
-    var counter = 0;
-    var characters;
-    // create loop which iterates through each character in text
-    for (characters = 0; characters < text.length; characters++) {
-        if (text[characters] === letter){
-            // if the character is the same, then counter increases
-            counter +=1;
+const HOURHAND = document.querySelector("#hour");
+const MINUTEHAND = document.querySelector("#minute");
+
+function AngleTime() {
+    var input = document.getElementById("angle").value;
+    var minutes = 0;
+    var hour = 0;
+    var angle;
+    for (loop = 0; loop < 720; loop++) {
+        console.log( "Hour", parseInt(loop/60), "Minute", loop % 60);
+        hour = parseInt(loop/60*30);
+        minutes = parseInt(loop%60*6);
+        angle = (minutes - hour);
+        console.log(angle, hour, loop);
+        if (angle == input) {
+            console.log("Angle", angle, "Hour", hour, "Minute", minutes);
+            let hrPosition = hour;
+            let minPosition = minutes;
+            HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
+            MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
         }
+
     }
-    console.log(counter);
 }
+
 ```
      
 Test Cases:
@@ -398,4 +409,47 @@ function Average(){
 **Test** 
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz36test.png)
+
+### Quiz 37 
+
+
+**HTML** 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz37</title>
+    <script src="quiz37java.js"></script>
+</head>
+<body>
+<button onclick="MaxHeight()">Activate function</button>
+
+</body>
+</html>
+```
+**Javascript** 
+
+```js
+function MaxHeight(){
+    var input = "384";
+    console.log("input is:", input);
+    var biggest_difference = 0;
+    for (i = 0; i <= input.length -2; i++){
+        // create loop which iterates through every number
+        // minus 2 length because i will be comparing the first number with its succeeding one
+        var difference = (parseInt(input[i+1])-parseInt(input[i]));
+        // calculate the difference
+        if (Math.abs(difference) > Math.abs(biggest_difference)){
+            // if the absolute value of the difference is larger then update the variable
+            biggest_difference = difference;
+        }
+    }
+    // return what the biggest difference is after checking through each number
+    console.log("Max difference is: ", biggest_difference);
+}
+```
+
+
 
