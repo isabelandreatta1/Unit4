@@ -5,9 +5,26 @@
 
 The invetory of office supplies used in the school is stored on a computer as a single file. 
 
-Each of the office supplies in the inventory (such as paper, ink, toner, printers, pens, staplers, pencils and scissors) has aa unique ID number, name, maximum quantity and remaining quantity. 
+Each of the office supplies in the inventory (such as paper, ink, toner, printers, pens, staplers, pencils and scissors) has a unique ID number, name, maximum quantity and remaining quantity. 
 
 **Outline the steps in an algorithm that would ouput a list of supplies with the quantity to be ordered [4]** 
+
+```
+Class OfficeSupplies (supply_name, supply_ID, maximum_quantity, remainting_quantity)
+  string supply_name
+  integer supply_ID
+  integer maximum_quantity
+  integer remaining_quantity
+  
+  function Get_order_quantity(name, maximum_quantity, remaining_quantity)
+    order_quantity = (maximum_quantity - remaining_quantity) 
+    return order_quantity
+    end function 
+    
+OfficeSupplies.add("pencil",1242,100,20)
+OfficeSupplies.add("stapler",2766,10,7)
+
+```
 
 
 ### Question 10 
