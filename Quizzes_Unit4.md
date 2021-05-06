@@ -490,4 +490,82 @@ Test 1
 
 Test 2 
 
+### Quiz 38
+
+Data structure alignment is the way data is arranged and accessed in computer memory. In C, a low level PL, a structure creates packs of one size. It takes the biggest size of object to be stored and chooses that to be the size of each pack. Each pack will take up that much memory even if the pack is not full. Then it takes objects in order and groups them into packs.
+
+[HL] Solve and test the program in Javascript
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz28.png) 
+
+**HTML**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz38</title>
+    <script src="quiz38.js"></script>
+</head>
+<body>
+<button onclick="datastructure()">Activate function</button>
+
+</body>
+</html>
+```
+**Javascript** 
+```js
+function datastructure(){
+    var input = [5,10,16,5,10];
+    // use max function which will find largest number of input, or in this case, largest pack
+    var biggestSize = Math.max.apply(0,input);
+    // number of packs starts with 1, this will be counter of number of packs
+    var numberOfPacks = 1;
+    // adder keeps on adding each pack
+    var adder = 0;
+    var packs;
+    // iterate through every pack in the input
+    for (packs = 1; packs <= input.length; packs ++){
+        // if the adder is equal to or smaller than the largest pack
+        if (adder <= biggestSize){
+            // then it means is not full,
+            adder += input[packs];
+        }
+        // if the last pack has a remainder
+        else if (packs == input.length -1){
+            if (adder != 0) {
+                //then add to counter
+                numberOfPacks += 1;
+            }
+        }
+        else {
+            // if the adder is larger than the pack, then add to the counter
+            numberOfPacks += 1;
+            // add previous pack
+            adder = input[packs-1];
+        }
+    }
+
+    // print input and bytes to check if correct
+    console.log("input is", input);
+    console.log(numberOfPacks * biggestSize, "bytes");
+
+        // example of how it works:
+        // 8 bits one byte
+        // find biggest piece of data of the same size, and then fit in chunk of sizes
+        // e.g. 1,2,8,2,4
+        // will create spaces in the ram that are 8 bits small and then put data inside
+        // total is 3 packs of 8 bytes
+        // must be in order
+
+}
+```
+
+**Tests** 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz28_Test1.png) 
+
+Test 1 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz28_Test2.png) 
 
