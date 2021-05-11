@@ -631,7 +631,7 @@ function TigerEscape(){
 
 In the test above, l is 12345, and s is 123. 
 
-![](https://github.com/isabelandreatta1/Unit4/blob/main/images/QuizTest2.pngv)
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/QuizTest2.png)
 
 **Test 2** 
 
