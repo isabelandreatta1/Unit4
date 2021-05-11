@@ -17,6 +17,8 @@ https://isabelandreatta1.github.io/terminology
 
 ### 3. Network diagram and the role of hardware
 
+https://isabelandreatta1.github.io/networkdiagram
+
 ### 4. LAN built in class 
 
 
