@@ -580,3 +580,43 @@ The first few narcissistic numbers are: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 
 
 Create a program to find the amount of narcissistic numbers between 2 given integers m and n (excluding m and n) and print them.
 
+### Quiz 40 
+
+
+Lily was crossing a thick forest when she realizes that there is a tiger ahead of her who has seen Lily. Lily quickly takes out a matchbox from her bag and burns a matchstick, because the tiger is afraid of fire. A matchstick takes 5 seconds to burn completely.
+Given that the length of the forest that Lily needs to cross is l meters , and that Lily's speed is s centimeters per second, print the minimum number of matchsticks Lily needs to burn to cross the forest safely.
+
+**HTML** 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz40</title>
+    <script src="quiz40.js"></script>
+</head>
+<body>
+<button onclick="TigerEscape()">Activate function</button>
+</body>
+</html>
+```
+
+**Javascript** 
+
+```html
+function TigerEscape(){
+    // create variables for two inputs
+    var l = 12345;
+    var s = 123;
+    // find time that takes to travel forest
+    var seconds = (l * 100)/s;
+    // then divide, rounding up, by the time it takes to burn a match 
+    var output = Math.ceil(seconds/5);
+    console.log(output, "matches");
+}
+
+```
+      
+
+
+
