@@ -441,6 +441,10 @@ function Average(){
 
 ### Quiz 37 
 
+Create a program that prints the number corresponding to the position of the highest hill in the string. A hill is represented by a series of increasing and decreasing numbers. Its height is the value of the number at the top of the hill.
+If there is no hill (as in "000", "1" or "666"), print 0.
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz37.png)
 
 **HTML** 
 
@@ -586,6 +590,8 @@ Create a program to find the amount of narcissistic numbers between 2 given inte
 Lily was crossing a thick forest when she realizes that there is a tiger ahead of her who has seen Lily. Lily quickly takes out a matchbox from her bag and burns a matchstick, because the tiger is afraid of fire. A matchstick takes 5 seconds to burn completely.
 Given that the length of the forest that Lily needs to cross is l meters , and that Lily's speed is s centimeters per second, print the minimum number of matchsticks Lily needs to burn to cross the forest safely.
 
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz40.png)
+
 **HTML** 
 ```html
 <!DOCTYPE html>
@@ -603,7 +609,7 @@ Given that the length of the forest that Lily needs to cross is l meters , and t
 
 **Javascript** 
 
-```html
+```js
 function TigerEscape(){
     // create variables for two inputs
     var l = 12345;
