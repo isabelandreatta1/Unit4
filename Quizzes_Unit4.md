@@ -622,6 +622,22 @@ function TigerEscape(){
 }
 
 ```
+
+**Tests** 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz40Test1.png)
+
+**Test 1** 
+
+In the test above, l is 12345, and s is 123. 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/QuizTest2.pngv)
+
+**Test 2** 
+
+In the test above, l is 100 and s is 100. 
+
+
       
 
 
