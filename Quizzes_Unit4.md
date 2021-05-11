@@ -113,6 +113,56 @@ Black was ejected.
 
 [HL] Solve and test the program in Javascript
 
+```js
+function guiltyparty() {
+    var input = "Green voted for Black,Black voted for Blue,Brown voted for Blue,Blue voted for Black,Cyan skipped voting,Lime voted for Black";
+    // splits the input for each vote
+    var newinput = input.split(",");
+    // create empty list for the number of sailors
+    var sailors = [];
+    // create empty list for all the sailors which are voted
+    var sailorsVoted = [];
+    var largestcount = 0;
+    var kickedout = "";
+    var count = 0;
+    var skippedCounter = 0;
+
+    // loop through to find the first word (the sailor who voted) and the last (the sailor who got voted) 
+    for (votes = 0; votes < newinput.length; votes++) {
+        var words = newinput[votes].split(" ");
+        // add them to the lists
+        sailors.push(words[0]);
+        sailorsVoted.push(words[words.length - 1]);
+    }
+    // iterate through every sailor
+    for (counts = 0; counts < sailors.length; counts++) {
+        // iterate through every sailor voted
+        for (allvotes = 0; allvotes < sailorsVoted.length; allvotes++) {
+            // if the sailor is the same as the sailor voted
+            if (sailors[counts] === sailorsVoted[allvotes]) {
+                // then the counter for the number of votes increase
+                count++;
+            } else if ("voting" === sailorsVoted[allvotes]) {
+                skippedCounter++;
+            }
+        }
+        // if  function to find the max value for counter 
+        console.log(sailors[counts], count);
+        // if the counter for the sailor is larger than the previous counter, 
+        if (count > largestcount) {
+            // then it becomes the largest 
+            largestcount = count;
+            count = 0;
+            kickedout = sailors[counts];
+        }
+    }
+}
+```
+
+**Test below** 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz31.png) 
+
 ### Quiz 32
 
 Black box: create the algorithm that produces the output given the input.
