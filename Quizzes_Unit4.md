@@ -288,6 +288,23 @@ that means that city 0 has no roads incoming (of course, the road could only com
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/quiz34tes.png)
 
+**HTML**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz34</title>
+    <script src="Quiz34.js"></script>
+</head>
+<body>
+
+</body>
+<button onclick="CountRoads()">Activate function</button>
+</html>
+```
+
 ## Quiz 35 
 
 Given an angle in degrees, find the time h:mm at which the hour and minute hands on a 12-hour clock form this angle exactly.
