@@ -175,6 +175,58 @@ Black box: create the algorithm that produces the output given the input.
 
 [HL] Solve and thest the program in Javascript
 
+**HTML** 
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz32</title>
+    <script src="quiz32.js"></script>
+</head>
+<body>
+<button onclick="quiz32()">Activate function</button>
+
+</body>
+</html>
+```
+
+**Javascript** 
+```js
+function quiz32(){
+    var input1 = '231 :ELPMAXE!';
+    var input2 = "SESSSSSSSSSSE";
+    var result = Array(input1.length);
+    var element;
+    var index = 0;
+
+    // go through each element of the input2 backwards
+    for (element = (input1.length-1); element >= 0; element --){
+        // if the element is E, then the index remains the same
+        if (input2[element] === "E"){
+            result[element] = input1[element];
+        }
+        else{
+            // if not/ the element is S, then the index is flipped 
+            result[index] = input1[element];
+            index ++;
+        }
+    }
+    console.log("input: ", input1, "input2: ", input2);
+    console.log("output: ", result.join(""));
+}
+```
+
+
+**Tests** 
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz321.png)
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32input2.png)
+
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32Test3.png)
+
 
 ### Quiz 33
 
