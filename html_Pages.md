@@ -1,3 +1,8 @@
+## Link to all my HTML pages 
+
+Considering that Github allows hosting static websites for free, I thought it would be easier to just postt all the websites we create on github.io so it is more interactive than just taking a screenshot. Unfortunately, Github only supports html, no other languages like Java, so I only published the simple webpages I created and not my quizzes. 
+
+
 ### 1. My Profile Webpage 
 
 *Maybe scroll down to see suprirse*
