@@ -167,11 +167,9 @@ function guiltyparty() {
 
 Black box: create the algorithm that produces the output given the input.
 
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32input.png)
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32input2.png)
-
-
-![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32input.png)
 
 [HL] Solve and thest the program in Javascript
 
