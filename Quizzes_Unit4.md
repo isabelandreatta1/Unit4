@@ -221,7 +221,7 @@ function quiz32(){
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz321.png)
 
-![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32input2.png)
+![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz31Test2.png)
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32Test3.png)
 
