@@ -225,6 +225,8 @@ function quiz32(){
 
 ![](https://github.com/isabelandreatta1/Unit4/blob/main/images/Quiz32Test3.png)
 
+There is a slight bug with the code, as shown with the test above. 
+
 
 ### Quiz 33
 
