@@ -756,6 +756,16 @@ In the test above, l is 12345, and s is 123.
 
 In the test above, l is 100 and s is 100. 
 
+### Quiz 41
+
+Particle simulation In this universe, there are many particles. Let us differentiate these particles by their size. New particles can be obtained when two different size particles collide with each other. The size of this new particle would be the absolute difference of the size of the collided particles.
+Given an infinite amount of starting particles, how many different particles are possible?
+
+
+**HTML Code**
+
+**JavaScript** 
+
 
       
 
